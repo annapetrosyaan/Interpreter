@@ -3,32 +3,21 @@
 
 namespace Interpeter
 {
-	namespace SyntaxChecker
+  namespace SyntaxChecker
+ {
+SYNTAX_STATUS syntaxChecker(std::vector<Token>* tokenList)
+{
+	unsigned i, j;
+	bool newInstruction = true,
+	lastWord = false;
+	for (i = 0; i < tokenList->size(); i++)
 	{
-
-
-
-		SYNTAX_STATUS syntaxChecker(vector<Token>* tokenList)
-		{
-			unsigned i, j;
-
-			bool newInstruction = true,
-				lastWord = false;
-
-
-			for (i = 0; i < tokenList->size(); i++)
-			{
-				if (tokenList->at(i).type() == TOKEN_WORD)
-				{
-					//if(
-				}
-				else if (tokenList->at(i).type() == TOKEN_TERMINATOR)
-				{
-
-				}
-			}
-			return SE0;
-		}
-
-	}
-}
+		if (tokenList->at(i).type() == TOKEN_WORD)
+		{  continue; }
+		else if (tokenList->at(i).type() == TOKEN_TERMINATOR)
+	    {	break;	} 
+    }
+return SE0;
+   }	
+  }
+ }
